@@ -15,6 +15,7 @@
 		8731262F28A6709900559882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8731262D28A6709900559882 /* LaunchScreen.storyboard */; };
 		8731263728A6728000559882 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8731263628A6728000559882 /* MemoListTableViewController.swift */; };
 		8731263A28A6730800559882 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8731263928A6730800559882 /* Model.swift */; };
+		8743675A28AD3B8B007F9611 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743675928AD3B8B007F9611 /* DetailViewController.swift */; };
 		8794F1E628A679F000CF5197 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8794F1E528A679F000CF5197 /* ComposeViewController.swift */; };
 		8794F1E828A67C4500CF5197 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8794F1E728A67C4500CF5197 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		8731263028A6709900559882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8731263628A6728000559882 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		8731263928A6730800559882 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8743675928AD3B8B007F9611 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8794F1E528A679F000CF5197 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		8794F1E728A67C4500CF5197 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 				8731263628A6728000559882 /* MemoListTableViewController.swift */,
 				8794F1E528A679F000CF5197 /* ComposeViewController.swift */,
 				8794F1E728A67C4500CF5197 /* UIViewController+Alert.swift */,
+				8743675928AD3B8B007F9611 /* DetailViewController.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				8731262A28A6709800559882 /* Memo.xcdatamodeld in Sources */,
 				8731263728A6728000559882 /* MemoListTableViewController.swift in Sources */,
 				8794F1E828A67C4500CF5197 /* UIViewController+Alert.swift in Sources */,
+				8743675A28AD3B8B007F9611 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
