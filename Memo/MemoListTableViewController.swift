@@ -28,7 +28,6 @@ class MemoListTableViewController: UITableViewController {
         // tableView를 업데이트 하기
         tableView.reloadData()
         
-//        tableView.reloadData()
     }
     
     var token: NSObjectProtocol?
