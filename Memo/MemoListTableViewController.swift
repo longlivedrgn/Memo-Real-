@@ -31,6 +31,17 @@ class MemoListTableViewController: UITableViewController {
             NotificationCenter.default.removeObserver(token)
         }
     }
+    
+    // segue가 연결된 화면을 생성하고, 화면을 전환하기 직전에 호출이 된다. sender -> cell을 받는다.
+    // 아래 코드는 Detailview의 memo 변수를 설정하는 과정이다.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
+            // destination -> 새로 전환되는 화면(DetailView)
+            if let vc = segue.destination as? DetailViewController {
+                vc.memo = Memo.dummyMemoList[indexPath.row]
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
