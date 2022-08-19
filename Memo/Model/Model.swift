@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 //class Memo {
 //    var content: String
 //    var insertDate: Date
