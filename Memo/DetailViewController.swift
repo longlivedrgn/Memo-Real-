@@ -30,7 +30,6 @@ class DetailViewController: UIViewController {
         present(vc, animated: true, completion: nil)
         
         // 나머지는 기기가 알아서 해준다!
-        
     }
     
     @IBAction func deleteMemo(_ sender: Any) {
