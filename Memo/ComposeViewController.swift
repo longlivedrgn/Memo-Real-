@@ -10,6 +10,7 @@ import UIKit
 class ComposeViewController: UIViewController {
     
     var editTarget: Memo?
+    
     // 편집 이전의 메모 내용을 저장하는 변수 생성
     var originalMemoContent: String?
 
@@ -84,19 +85,22 @@ class ComposeViewController: UIViewController {
 }
 
 extension ComposeViewController: UITextViewDelegate {
+    
     // textView에서 text가 변경될 때마다 호출이 된다.
     func textViewDidChange(_ textView: UITextView) {
         if let original = originalMemoContent, let edited = textView.text {
             // 원본과 편집된 것이 같은 지 다른지를 판단하여 편집이 된것인지 체크를 할 수 있다.
-            // 만약 다르다면(편집이 된것이라면) isModalInPresentation -> true -> sheet를 내리는 것도 불가능하다.
+            // 만약 다르다면(편집이 된 것이라면) isModalInPresentation -> true -> sheet를 내리는 것도 불가능하다.
             isModalInPresentation = original != edited
         }
     }
 }
 
 extension ComposeViewController: UIAdaptivePresentationControllerDelegate {
+    
     // 만약 isModalInPresentation가 true라면 아래의 함수가 호출이 된다.
-    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+    func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+    
         // 경고 창 띄우기
         let alert = UIAlertController(title: "알림", message: "편집한 내용을 저장할까요?", preferredStyle: .alert)
         
@@ -108,14 +112,13 @@ extension ComposeViewController: UIAdaptivePresentationControllerDelegate {
         alert.addAction(okAction)
         
         // 취소 액션 만들기
-        // 경고창에서 취소버튼을 누르면 크로져가 실행이 된다.
+        // 경고창에서 취소버튼을 누르면 클로져가 실행이 된다.
         let cancelAction = UIAlertAction(title: "취소", style: .cancel) { [weak self] (action) in
             self?.close(action)
         }
         alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
-        
     }
 }
 
