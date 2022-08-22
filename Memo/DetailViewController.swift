@@ -22,7 +22,17 @@ class DetailViewController: UIViewController {
         return f
     }()
     
+    @IBAction func share(_ sender: Any) {
         
+        // 새로운 상수로 바인딩하기
+        guard let memo = memo?.content else {return}
+        let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+        present(vc, animated: true, completion: nil)
+        
+        // 나머지는 기기가 알아서 해준다!
+        
+    }
+    
     @IBAction func deleteMemo(_ sender: Any) {
         // 경고창을 생성
         let alert = UIAlertController(title: "삭제 확인", message: "메모를 삭제할까요?", preferredStyle: .alert)
